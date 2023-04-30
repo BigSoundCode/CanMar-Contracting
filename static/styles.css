@@ -50,6 +50,11 @@
     justify-content: center;
     align-items: center;
 }
+
+#myVideo {
+  width: 100%;
+  height: auto;
+}
     
 
   .logo {
@@ -70,7 +75,7 @@
     align-items: left;
     position: relative;
     z-index: 1;
-    bottom: 200px;
+    bottom: 300px;
     left: 156px;
     margin-right: 154px;
 
@@ -139,9 +144,7 @@ footer {
 }
 
 .photo-grid-service {
-  display: grid;
-  grid-template-columns: repeat(3, 465px);
-  grid-template-rows: repeat(1, 465px);
+  display: flex;
   grid-gap: 78px;
   margin-left: 154px;
   margin-right: 154px;
