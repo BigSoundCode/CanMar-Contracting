@@ -650,6 +650,11 @@ figcaption {
   .flex-row > * {
     flex-basis: 100%;
   }
+  .service-image {
+    max-width: 83vw;
+    margin-left: 8.3%;
+    margin-right: 8.3%;
+  }
 }
 .col {
   flex: 1;
