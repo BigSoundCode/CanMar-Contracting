@@ -111,7 +111,7 @@
 .header-font {
   color: white;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   text-align: left;
 }
 
@@ -933,6 +933,11 @@ figcaption {
   .experts {
     font-size: 30px;
     font-weight: bold;
+  }
+  .horiz-logo {
+    max-width: 83vw;
+    height: auto;
+    padding: 10px;
   }
 }
 .itemAbout {
