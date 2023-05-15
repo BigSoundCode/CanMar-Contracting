@@ -36,7 +36,7 @@
   }
   .header-container {
     position: relative;
-    top: -160px;
+    top: -200px;
   }
 }
 .logo-container {
@@ -719,6 +719,9 @@ figcaption {
   .safety-intro {
     font-size: 16px;
   }
+  .safety-small {
+    font-size: smaller;
+  }
 }
 .safety-strip {
   margin-right: 10px;
@@ -960,9 +963,11 @@ figcaption {
 @media screen and (max-width: 1450px) {
   .sub {
     opacity: 0;
+    height: 0px;
   }
   .home-rule {
     opacity: 0;
+    height: 0px;
   }
   .home-container {
     display: flex;
