@@ -273,12 +273,14 @@ footer {
     margin-right: 3%;
   }
   .photo-grid-service {
-    flex-wrap: wrap;
     margin-left: 8.3%;
     margin-right: 8.3%;
+    max-width: 94vw;
+    grid-template-columns: repeat(2, 465px);
+    grid-template-rows: repeat(2, 465px);
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1011px) {
   .photo-grid {
     display: flex;
     flex-direction: column;
@@ -343,6 +345,10 @@ footer {
 }
 
 .photo-grid img:hover + p {
+  opacity: 1;
+}
+
+.photo-grid img:focus + p {
   opacity: 1;
 }
 
@@ -556,6 +562,10 @@ footer {
   opacity: 1;
 }
 
+.image:focus p {
+  opacity: 1;
+}
+
 .image hr {
   width: 75%;
   color: white;
@@ -730,6 +740,7 @@ figcaption {
     align-items: center;
     margin-left: 3%;
     margin-right: 3%;
+    max-width: 94vw;
   }
   .contact-box {
     width: 100%;
@@ -773,7 +784,8 @@ figcaption {
     flex-basis: 100%;
   }
   .service-image {
-    max-width: 94vw;
+    max-width: 100%;
+    height: 465px;
   }
   figure {
     margin: 0;
