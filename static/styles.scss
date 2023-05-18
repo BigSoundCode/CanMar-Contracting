@@ -18,7 +18,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 800px;
     position: relative;
     overflow: hidden;
   }
@@ -28,9 +27,27 @@
     height: auto;
   }
 
+  .header-container {
+    top: -100px;
+    position: relative;
+  }
+
 }
 
+
 @media screen and (max-width: 759px) {
+  .header-home {
+    height: 400px;
+  }
+  .header-container {
+    position: relative;
+    top: -100px;
+
+  }
+
+}
+
+@media screen and (max-width: 560px) {
   .header-home {
     height: 400px;
   }
@@ -43,11 +60,16 @@
 }
 
 
+
+
+
 .logo-container {
   margin-right: auto;
   flex-basis: 30%;
   max-width: 30%;
   height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-container {
@@ -68,13 +90,15 @@
     z-index: 2;
     display: flex;
 
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 #myVideo {
   width: 100%;
   height: auto;
+  object-fit: cover;
+  max-height: 800px;
 }
     
 
@@ -83,15 +107,17 @@
     width: 392px;
     height: auto;
     left: 8.3%;
-    top: 42px;
+    top: 70px;
     max-width: 20%;
     max-height: auto;
     min-width: 200px;
   }
 
   .content-space {
-    height: 154px;
+    height: 100px;
+    align-items: center;
   }
+
 @media screen and (max-width: 974px) {
   .footer {
     flex-direction: column;
@@ -99,6 +125,17 @@
     height:max-content;
 
   }
+
+  .logo {
+    position: relative;
+    height: auto;
+    left: 8.3%;
+    top: 40%;
+    max-width: 20%;
+    max-height: auto;
+    min-width: 200px;
+  }
+
 }
 
 @media screen and (max-width: 759px) {
@@ -133,7 +170,7 @@
 }
 
 .inline h2 {
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -228,7 +265,7 @@ body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
  
 }
 footer {
@@ -272,8 +309,8 @@ footer {
     grid-template-columns: repeat(2, 465px);
     grid-template-rows: repeat(3, 465px);
     grid-gap: 78px;
-    margin-left: 8.3%;
-    margin-right: 8.3%;
+    margin-left: 3%;
+    margin-right: 3%;
     }
 
     .photo-grid-service {
@@ -291,6 +328,9 @@ footer {
   .photo-grid {
     display: flex;
     flex-direction: column;
+    margin-left: 3%;
+    margin-right: 3%;
+    max-width: 94%;
 
     
   }
@@ -306,8 +346,8 @@ footer {
 .photo-grid-service {
   display: flex;
   grid-gap: 78px;
-  margin-left: 8.3%;
-  margin-right: 8.3%;
+  margin-left: 3%;
+  margin-right: 3%;
   
 
 }
@@ -319,6 +359,7 @@ footer {
   object-fit: cover;
   overflow: hidden;
   min-height: 465px;
+  max-width: 100%;
 }
 
 .photo-grid-container {
@@ -379,6 +420,13 @@ footer {
     height: fit-content;
 
   }
+
+  .photo-grid-container {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  
 }
 
 
@@ -451,7 +499,7 @@ footer {
 .hamburger .line{
   width: 50px;
   height: 5px;
-  background-color: #000000;
+  background-color: #ac8b55;
   display: block;
   margin: 8px auto;
   -webkit-transition: all 0.3s ease-in-out;
@@ -552,11 +600,11 @@ footer {
 
 .image {
   position: relative;
+  display: inline-block;
   
 }
 .image img {
   width: 100%;
-  vertical-align: top;
   object-fit: cover;
 }
 .image:after {
@@ -573,11 +621,16 @@ footer {
 .image:hover:after {
   opacity: 1;
 }
+
+.image:focus:after {
+  opacity: 1;
+}
+
 .image p {
   position: absolute;
-  top: 25%;
+  top: 10px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   z-index: 1;
   color: #fff;
   opacity: 0;
@@ -665,7 +718,6 @@ Services page
 */
 
 .service-heading {
-  margin-top: 154px;
   position: relative;
   margin-bottom: 20px;
 }
@@ -677,6 +729,13 @@ Services page
 figure {
   margin: 0;
   padding: 0;
+  width: 465px;
+  height: 465px;
+}
+
+.service-image {
+  width: 465px;
+  height: 465px;
 }
 
 figcaption {
@@ -690,14 +749,52 @@ figcaption {
 
 .contact-box {
   height: 1078px;
-  width: 84.4%;
+  width: 0%;
   background-color: black;
-  margin: auto;
   display: flex;
   flex-direction: column;
+  margin: none;
+  animation: expand 2.3s ease forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+
 
 }
 
+@keyframes expand {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.contact-header {
+  margin-left: 8.3%;
+  margin-top: 8.3%;
+  color: white;
+}
+
+.contact-image {
+  height: 1078px;
+  max-width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100
+}
+
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 8.3%;
+  margin-right: 8.3%;
+  align-items: start;
+  position: relative;
+  
+}
 .contact-text {
   flex-wrap: wrap; 
   justify-content: space-between;
@@ -705,6 +802,45 @@ figcaption {
   color: white;
 
 
+}
+
+@media screen and (max-width: 1121px) {
+  .contact-image {
+    width: 0;
+    opacity: 0;
+  }
+  .contact-right {
+    width: 0px;
+    height: 0px;
+
+  }
+  .contact-left {
+    width: 100%;
+  }
+  .contact-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .contact-box {
+    width: 100%;
+    min-width: 361px;
+    animation: none;
+
+  }
+
+}
+
+.contact-right {
+  width: 33%;
+}
+.contact-left {
+  max-width: 66%;
+  top: 0;
+  position: relative;
+  padding: none;
 }
 .bold {
   font-weight: bold;
@@ -714,6 +850,7 @@ figcaption {
 
   margin-left: 8.3%;
   margin-top: 8.3%;
+  z-index: 2;
 
 
 }
@@ -730,15 +867,23 @@ figcaption {
   margin: 5px;
 }
 
+
 @media (max-width: 768px) {
   .flex-row > * {
     flex-basis: 100%;
   }
   .service-image {
-    max-width: 83vw;
-    margin-left: 8.3%;
-    margin-right: 8.3%;
+    max-width: 94vw;
+    
+    
   }
+
+  figure {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+  
   
 }
 
@@ -765,8 +910,8 @@ figcaption {
 .safety-grid {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: space-between;
   margin-left: 8.3%;
   margin-right: 8.3%;
 }
@@ -775,6 +920,7 @@ figcaption {
     max-width: 900px;
     width: auto;
     height: auto;
+    margin-right: 60px
   }
 
 
@@ -783,7 +929,9 @@ figcaption {
     display: flex;
     flex-direction: column;
     align-items: left;
-    justify-content: center;
+    justify-content: left;
+    margin-left: none; /* Center the container horizontally */
+
   }
   .safety-img { 
     max-width: 83vw;
@@ -813,7 +961,9 @@ figcaption {
   }
 
   .safety-intro {
-    font-size: 16px;
+    font-size: 20px;
+    margin-left: 0%;
+    padding-left: none;
   }
   .safety-small {
     font-size: smaller;
@@ -836,7 +986,6 @@ figcaption {
 }
 
 .safety-intro {
-  margin-left: 8.3%;
   font-size: 20px;
 }
 
@@ -853,6 +1002,8 @@ figcaption {
   display: flex;
   justify-content: center;
   max-width: 83vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .strip {
@@ -865,6 +1016,7 @@ figcaption {
     word-wrap: break-word;
     max-width: 80%; /* Set the desired width */
     margin: 10 auto; /* Center the container horizontally */
+    font-size: 20px;
 }
 
 
@@ -965,7 +1117,7 @@ figcaption {
 }
 
 .experts {
-  font-size: 60px;
+  font-size: 20px;
   font-weight: bold;
   margin-left: 8.3%;
 }
@@ -1030,8 +1182,7 @@ figcaption {
 }
 
 .aboutIntro {
-  font-size: 16px; 
-  width: 700px; 
+  font-size: 20px; 
   margin-right: 8.3%; 
   margin-bottom: 0; 
   margin-top:0; 
@@ -1041,11 +1192,13 @@ figcaption {
 @media screen and (max-width: 756px) {
 
   .aboutIntro {
-    font-size: 16px; 
+    font-size: 20px; 
     width: 100%; 
     margin-bottom: 0; 
     margin-top:0; 
     height: auto;
+    margin-left: none;
+    margin-right: none;
   }
 
   .about-grid {
@@ -1062,7 +1215,7 @@ figcaption {
   }
 
   .experts {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
   }
 
@@ -1071,13 +1224,43 @@ figcaption {
     height: auto;
     padding: 10px;
   }
+
+  .logo-grid {
+
+    align-items: center;
+    margin: auto;
+    justify-content: space-around;
+    
+    }
+
+    .associations {
+      align-items: center;
+    }
+    
+  }
+
+  @media screen and (max-width: 1296px) {
+
+    .about-grid {
+      flex-direction: column;
+    }
+
+    .photo-grid-about {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+  
+
+  }
+
   
   
     
   
   
 
-}
+
 
 .itemAbout {
   grid-column: 5 / 6; /* This item spans two columns */
@@ -1098,7 +1281,7 @@ figcaption {
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1296px) {
   .sub {
     opacity: 0;
     height: 0px;
@@ -1120,18 +1303,19 @@ figcaption {
 
 .item {
   display: flex;
-  align-items:start;
+  align-items: flex-start;
   margin-bottom: 50px;
   width: 100%;
 }
 
-.item:nth-child(even) {
+/*.item:nth-child(even) {
   flex-direction: row-reverse;
-}
+}*/
 
 .item img {
-  width: 924px;
-  height: 616px;
+  width: 80%;
+  height: auto;
+  max-height: 512px;
   object-fit: cover;
 }
 
@@ -1139,8 +1323,8 @@ figcaption {
   flex: 1;
   max-width: 684px;
   width: auto;
-  margin-left: 8.3%;
-  margin-right: auto;
+  margin-left: 3%;
+  margin-right: 3%;
   text-align: justify;
   flex-basis: calc(100% - 924px - 154px);
 }
@@ -1151,8 +1335,8 @@ figcaption {
 }
 
 .item:first-child .text {
-  margin-left: auto;
-  margin-right: 154px;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 @media screen and (max-width: 1450px) {
@@ -1171,7 +1355,7 @@ figcaption {
     width: auto;
     margin-left: 10px;
     margin-right: 10px;
-    text-align: none;
+    text-align: start;
     flex-basis: none;
   }
   .item:first-child {
@@ -1191,13 +1375,14 @@ figcaption {
   }
 
 .home-intro {
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 20px;
+  text-align: justify;
+  margin-left: 3%;
 }
 
 .home-text {
-  font-size: 36px;
-  font-weight: 400;
+  font-size: 20px;
+  text-align: justify;
 
 }
 
@@ -1227,12 +1412,15 @@ figcaption {
   min-height: 200px;
   margin-top:10px;
   clear: both;
+  max-height: 657px;
 }
 
 
 .esgBanner img {
   width: 100%;
   height: auto;
+  max-height: 657px;
+  object-fit: cover;
   
 }
 
@@ -1253,7 +1441,7 @@ figcaption {
   left: 0;
   width: 100%;
   height: 100%;
-  /*background-color: rgba(0,0,0,0.2); */ /* Change the 0.5 to adjust the transparency */ 
+  background-color: rgba(0,0,0,0.2); /* Change the 0.5 to adjust the transparency */ 
   display: flex;
   color: #fff;
   font-size: 2rem;
@@ -1284,5 +1472,10 @@ figcaption {
   .esgOverlay h2 {
     font-size: 1rem;
   }
+}
+
+.standard-banner {
+  max-height: 657px;
+  object-fit: cover;
 }
 
