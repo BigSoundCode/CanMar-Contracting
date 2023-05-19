@@ -317,8 +317,9 @@ footer {
       margin-left: 8.3%;
       margin-right: 8.3%;
       max-width: 94vw;
-      grid-template-columns: repeat(2, 465px);
-      grid-template-rows: repeat(2, 465px);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
 
     }
   
@@ -840,6 +841,8 @@ figcaption {
   .contact-box {
     width: 100%;
     animation: none;
+    min-width: fit-content;
+
 
   }
 
