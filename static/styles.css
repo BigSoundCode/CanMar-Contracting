@@ -744,7 +744,6 @@ figcaption {
   }
   .contact-box {
     width: 100%;
-    min-width: 94vw;
     animation: none;
   }
 }
@@ -1229,6 +1228,9 @@ figcaption {
   }
   .home-intro {
     font-size: 20px;
+  }
+  .header-font h4 {
+    height: 0px;
   }
 }
 .text h2 {

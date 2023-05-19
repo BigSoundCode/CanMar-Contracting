@@ -839,7 +839,6 @@ figcaption {
   }
   .contact-box {
     width: 100%;
-    min-width: 94vw;
     animation: none;
 
   }
@@ -1295,6 +1294,8 @@ figcaption {
   flex-wrap: wrap;
 }
 
+
+
 @media screen and (max-width: 1296px) {
   .sub {
     opacity: 0;
@@ -1407,6 +1408,10 @@ figcaption {
 
   .home-intro {
     font-size: 20px;
+  }
+
+  .header-font h4 {
+    height: 0px;
   }
 }
 
