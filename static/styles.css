@@ -41,6 +41,12 @@
     position: relative;
     top: -100px;
   }
+  p {
+    font-size: 16px !important;
+  }
+  li {
+    font-size: 16px !important;
+  }
 }
 @media screen and (max-width: 560px) {
   .header-home {
@@ -275,7 +281,7 @@ footer {
   .photo-grid-service {
     margin-left: 8.3%;
     margin-right: 8.3%;
-    max-width: 94vw;
+    max-width: 94%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -291,6 +297,11 @@ footer {
   }
   .photo-grid-service {
     flex-direction: column;
+    max-width: 94% !important;
+    margin-right: 3%;
+    margin-left: 3%;
+    flex-wrap: nowrap;
+    grid-gap: 78px;
   }
   .content-space {
     height: 75px;
@@ -347,10 +358,12 @@ footer {
 
 .photo-grid img:hover + p {
   opacity: 1;
+  display: block;
 }
 
 .photo-grid img:focus + p {
   opacity: 1;
+  display: block;
 }
 
 .footer-grid {
@@ -377,6 +390,7 @@ footer {
   .photo-grid-container {
     margin-left: 3%;
     margin-right: 3%;
+    max-width: 94% !important;
   }
 }
 .footer-grid div:not(:last-child) {
@@ -542,10 +556,12 @@ footer {
 
 .image:hover:after {
   opacity: 1;
+  display: block;
 }
 
 .image:focus:after {
   opacity: 1;
+  display: block;
 }
 
 .image p {
@@ -561,10 +577,12 @@ footer {
 
 .image:hover p {
   opacity: 1;
+  display: block;
 }
 
 .image:focus p {
   opacity: 1;
+  display: block;
 }
 
 .image hr {
@@ -885,6 +903,7 @@ figcaption {
 
 .safety-intro {
   font-size: 20px;
+  text-align: justify;
 }
 
 .box-text p {
@@ -1064,6 +1083,7 @@ figcaption {
   margin-bottom: 0;
   margin-top: 0;
   height: auto;
+  text-align: justify;
 }
 
 @media screen and (max-width: 756px) {
@@ -1295,6 +1315,16 @@ figcaption {
 .esgText {
   margin-left: 8.3%;
   margin-right: 8.3%;
+}
+
+.esgText ul li {
+  text-align: justify;
+  font-size: 20px;
+}
+
+.esgText p {
+  text-align: justify;
+  font-size: 20px;
 }
 
 @media (max-width: 768px) {
