@@ -888,6 +888,10 @@ figcaption {
   .safety-small {
     font-size: smaller;
   }
+  .safetyText {
+    width: 100%;
+    max-width: none;
+  }
 }
 .safety-strip {
   margin-right: 10px;
@@ -927,9 +931,10 @@ figcaption {
 
 .safetyText {
   word-wrap: break-word;
-  max-width: 80%; /* Set the desired width */
   margin: 10 auto; /* Center the container horizontally */
   font-size: 20px;
+  text-align: justify;
+  margin-right: 60px;
 }
 
 .special-text-3 {
