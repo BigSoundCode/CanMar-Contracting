@@ -1222,13 +1222,6 @@ figcaption {
     align-items: center;
   }
 
-  .photo-grid-about {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 78px;
-    
-  
-  }
 
   .experts {
     font-size: 20px;
@@ -1255,16 +1248,28 @@ figcaption {
     
   }
 
-  @media screen and (max-width: 1296px) {
+  @media screen and (max-width: 1079px) {
+    .photo-grid-about {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 78px;
+      
+    
+    }
+  
+  }
+
+  @media screen and (max-width: 1590px) {
 
     .about-grid {
       flex-direction: column;
     }
 
     .photo-grid-about {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
+      grid-template-columns: repeat(2, 465px);
+      justify-content: space-between;
+      grid-gap: auto;
+
     }
   
 
