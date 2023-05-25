@@ -37,7 +37,7 @@
 
 @media screen and (max-width: 759px) {
   .header-home {
-    height: 400px;
+    height: fit-content;
   }
   .header-container {
     position: relative;
@@ -57,7 +57,7 @@
 
 @media screen and (max-width: 560px) {
   .header-home {
-    height: 400px;
+    height: fit-content;
   }
   .header-container {
     position: relative;
@@ -147,6 +147,13 @@
 
 }
 
+#myImage {
+  display: none;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 759px) {
   .content-space {
     height: 20px;
@@ -200,7 +207,20 @@
     text-align: center !important;
   }
 
+  #myVideo {
+    display: none;
+  }
+
+  #myImage {
+    display: block;
+    max-height: 300px;
+    width: 100%;
+
   
+}
+.home-br {
+  display: none;
+}
 }
 
 
@@ -1536,6 +1556,12 @@ figcaption {
 
   .header-font h4 {
     height: 0px;
+    display: none;
+  }
+
+  .header-font {
+    position: absolute;
+    top: 100px;
   }
 }
 
