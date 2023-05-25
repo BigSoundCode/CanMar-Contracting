@@ -732,11 +732,16 @@ footer {
   transition: opacity 0.5s ease;
   visibility: 0;
 }
+
+.image:after.active {
+  opacity: 1;
+}
 .image:hover:after {
   opacity: 1;
   display: block;
   visibility: 1;
 }
+
 
 .image:focus:after {
   opacity: 1;

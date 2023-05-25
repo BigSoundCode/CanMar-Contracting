@@ -625,6 +625,10 @@ footer {
   visibility: 0;
 }
 
+.image:after.active {
+  opacity: 1;
+}
+
 .image:hover:after {
   opacity: 1;
   display: block;
