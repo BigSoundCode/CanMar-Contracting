@@ -184,6 +184,9 @@
   .menu li {
     text-align: center !important;
   }
+  .menu {
+    right: unset !important;
+  }
   #myVideo {
     display: none;
   }
