@@ -155,6 +155,17 @@
 }
 
 @media screen and (max-width: 759px) {
+
+
+  #hamburger-1.is-active {
+    position: fixed;
+    z-index: 1000;
+    top: 100px;
+  }
+
+
+
+
   .content-space {
     height: 20px;
 
@@ -186,7 +197,7 @@
   }
 
   .menu ul {
-    margin-top: 300px !important;
+    margin-top: 200px !important;
     text-align: center;
   }
   .logo-container {
@@ -478,17 +489,20 @@ footer {
   font-weight: bold;
   text-align: center;
   opacity: 0;
+  visibility: 0;
   transition: opacity 0.2s ease-in-out;
 }
 
 .photo-grid img:hover + p {
   opacity: 1;
   display: block;
+  visibility: 1;
 }
 
 .photo-grid img:focus + p {
   opacity: 1;
   display: block;
+  visibility: 1;
 }
 
 
@@ -712,15 +726,18 @@ footer {
   background: rgba(0,0,0,0.6);
   opacity: 0;
   transition: opacity 0.5s ease;
+  visibility: 0;
 }
 .image:hover:after {
   opacity: 1;
   display: block;
+  visibility: 1;
 }
 
 .image:focus:after {
   opacity: 1;
   display: block;
+  visibility: 1;
 }
 
 .image p {
