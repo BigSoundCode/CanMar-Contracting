@@ -77,3 +77,18 @@ $('.expand-button-5').on('click', function(){
 });
 
 
+// Get all image containers
+const imageContainers = document.querySelectorAll('.image:after');
+
+// Add event listeners for touch-based devices
+imageContainers.forEach(container => {
+  container.addEventListener('touchstart', () => {
+    // Add the 'active' class to the image container
+    container.classList.add('active');
+  });
+
+  container.addEventListener('touchend', () => {
+    // Remove the 'active' class from the image container
+    container.classList.remove('active');
+  });
+});
