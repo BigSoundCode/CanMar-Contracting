@@ -493,20 +493,17 @@ footer {
   font-weight: bold;
   text-align: center;
   opacity: 0;
-  visibility:hidden;
   transition: opacity 0.2s ease-in-out;
 }
 
 .photo-grid img:hover + p {
   opacity: 1;
   display: block;
-  visibility: visible;
 }
 
 .photo-grid img:focus + p {
   opacity: 1;
   display: block;
-  visibility: visible;
 }
 
 
@@ -730,7 +727,6 @@ footer {
   background: rgba(0,0,0,0.6);
   opacity: 0;
   transition: opacity 0.5s ease;
-  visibility: hidden;
 }
 
 .image:after.active {
@@ -739,14 +735,12 @@ footer {
 .image:hover:after {
   opacity: 1;
   display: block;
-  visibility: visible;
 }
 
 
 .image:focus:after {
   opacity: 1;
   display: block;
-  visibility: visible;
 }
 
 .image p {
