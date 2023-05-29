@@ -625,7 +625,7 @@ footer {
   opacity: 1;
 }
 
-.image:hover:after {
+.image:hover:after, .image.touch-hover {
   opacity: 1;
   display: block;
 }
@@ -1191,6 +1191,18 @@ figcaption {
   margin-top: 0;
   height: auto;
   text-align: justify;
+}
+
+.aboutText {
+  font-size: 20px;
+  margin-right: 8.3%;
+  margin-left: 8.3%;
+  height: auto;
+  text-align: justify;
+}
+
+.new {
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 756px) {
