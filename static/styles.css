@@ -609,7 +609,7 @@ footer {
      object-fit: cover;
 }
 
-.image:after, .image.touch-hover {
+.image:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -621,11 +621,11 @@ footer {
   transition: opacity 0.5s ease;
 }
 
-.image:after.active, .image.touch-hover {
+.image:after.active {
   opacity: 1;
 }
 
-.image:hover:after, .image.touch-hover {
+.image:hover:after {
   opacity: 1;
   display: block;
 }
@@ -646,7 +646,7 @@ footer {
   transition: opacity 0.5s ease;
 }
 
-.image:hover p, .image.touch-hover p {
+.image:hover p {
   opacity: 1;
   display: block;
 }
@@ -667,7 +667,7 @@ footer {
   left: 12.5%;
 }
 
-.image:hover hr, .image.touch-hover {
+.image:hover hr {
   opacity: 1;
 }
 

@@ -77,18 +77,14 @@ $('.expand-button-5').on('click', function(){
 });
 
 
-// Get all image containers
-const imageContainers = document.querySelectorAll('.image:after');
+document.addEventListener('DOMContentLoaded', function() {
+  var image = document.querySelector('.image');
 
-// Add event listeners for touch-based devices
-imageContainers.forEach(container => {
-  container.addEventListener('touchstart', () => {
-    // Add the 'active' class to the image container
-    container.classList.add('active');
+  image.addEventListener('touchstart', function() {
+    image.classList.add('after');
   });
 
-  container.addEventListener('touchend', () => {
-    // Remove the 'active' class from the image container
-    container.classList.remove('active');
+  image.addEventListener('touchend', function() {
+    image.classList.remove('after');
   });
 });
