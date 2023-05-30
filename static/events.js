@@ -78,7 +78,7 @@ $('.expand-button-5').on('click', function(){
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  var image = document.querySelector('.image');
+  var image = document.querySelectorAll('.image');
 
   image.addEventListener('touchstart', function() {
     image.classList.add('after');
