@@ -81,10 +81,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var image = document.querySelectorAll('.image');
 
   image.addEventListener('touchstart', function() {
-    image.classList.add('after');
+    image.classList.add('active');
+  });
+
+  image.addEventListener('touchmove', function() {
+    image.classList.remove('active');
   });
 
   image.addEventListener('touchend', function() {
-    image.classList.remove('after');
+    image.classList.remove('active');
   });
 });
