@@ -746,6 +746,7 @@ figure {
 .service-image {
   width: 465px;
   height: 465px;
+  object-fit: cover;
 }
 
 figcaption {
