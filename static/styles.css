@@ -692,6 +692,16 @@ footer {
   padding-top: 8px;
 }
 
+@media screen and (max-width: 767px) {
+  .image ul {
+    top: 60%;
+  }
+  .image hr {
+    top: 30%;
+  }
+}
+
+
 /* Header menu text beside hamburger */
 .menu-header {
   margin-right: 10px; /* Adjust as needed */
