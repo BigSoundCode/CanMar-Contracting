@@ -1144,10 +1144,11 @@ figcaption {
 .about-grid {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   margin-left: 8.3%;
   margin-right: 8.3%;
   justify-content: space-between;
+  
 }
 
 .associations {
